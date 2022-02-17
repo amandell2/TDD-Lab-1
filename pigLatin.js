@@ -10,7 +10,7 @@ function translate(string){
     //if string starts with x amount of consonants
         }else if(vowelIndex > 0){
             let removedLetters = wordLetters.slice(0,vowelIndex).join('');
-            //".shift" to remove first letter
+            //".splice" to remove letters before vowel
             wordLetters.splice(0,vowelIndex);    
             //".push" to add value to the end of array
             wordLetters.push(removedLetters);
@@ -22,6 +22,6 @@ function translate(string){
 
 };
 
-translate("throw");
+//console.log(translate("throw"));
 
 module.exports = translate;
